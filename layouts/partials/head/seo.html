@@ -16,6 +16,8 @@
     <meta name="baidu-site-verification" content="{{ . }}" />
 {{- end -}}
 
+{{ template "_internal/google_analytics.html" . }}
+
 {{- /* Home SEO */ -}}
 {{- if .IsHome -}}
     <script type="application/ld+json">
@@ -64,6 +66,8 @@
 
 {{- /* Page SEO */ -}}
 {{- else if .IsPage -}}
+{{ template "_internal/google_analytics.html" . }}
+
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
